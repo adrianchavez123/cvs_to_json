@@ -16,7 +16,7 @@ const Convertor =  function Convertor(file=defaultCSV){
       results.push(json);
     })
     .on('done',()=>{
-      console.log( (jsonFormat)? JSON.stringify(results) : results);
+      console.log(  JSON.stringify(results,null, (jsonFormat ) ? 2: undefined ) );
 
     })
     .on( 'error', error => {
